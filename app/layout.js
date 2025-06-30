@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { MailProvider } from "@/context/mailContext";
 import { Toaster } from "react-hot-toast"
+import AuthWrapper from "@/components/auth-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark" disableTransitionOnChange>
           <SidebarProvider>
             <MailProvider>
-              {children}
+              <AuthWrapper>
+                {children}
+              </AuthWrapper>
             </MailProvider>
           </SidebarProvider>
         </ThemeProvider>
