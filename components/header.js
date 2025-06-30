@@ -115,6 +115,7 @@ export function Header({ onToggleTodoBoard, showTodoBoard }) {
             >
               <Kanban className="h-4 w-4" />
               {!isMobile && <span className="ml-2">Tasks</span>}
+              }
             </Button>
           </div>
         </div>
